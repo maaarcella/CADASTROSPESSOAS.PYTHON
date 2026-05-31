@@ -1,0 +1,47 @@
+import os
+import time
+
+
+opcao = 0
+pessoa_nome = []
+pessoa_email = []
+pessoa_telefone = []
+
+while opcao != 3:
+    print ("------MENU------")
+    print("1- Para cadastrar")
+    print("2- Para a listagem")
+    print("3- Para excluir usuários")
+    print("4- Para sair do sistema")
+
+    opcao = int(input("Escolha sua opção"))
+
+    if opcao == 1:
+        nome = input("Digite seu nome completo: ")
+        pessoa_nome.append(nome)
+        email = input("Digite seu email: ")
+        pessoa_email.append(email)
+        telefone = input("Digite o seu telefone: ")
+        pessoa_telefone.append(telefone)
+        print("Usuário cadastrado com sucesso")
+        input()
+        os.system("cls")
+        
+    elif (opcao == 2):
+        print("-----------USUÁRIOS----------")
+        for nome, email, telefone in zip (pessoa_nome, pessoa_email, pessoa_telefone):
+            print(f"Nome:  {nome }")
+            print(f"Nome:  {email }")
+            print(f"Nome:  {telefone }")
+            print("-----------------------------")
+
+
+    elif (opcao == 3):
+        excluir = int(print("Qual usuário dejesa descartar?: "))
+
+    elif (opcao == 4):
+        print("SISTEMA ENCERRADO")
+        break
+
+        
+
